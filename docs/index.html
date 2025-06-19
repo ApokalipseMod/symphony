@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+  const hash = window.location.hash.substr(1);
+  const params = new URLSearchParams(hash);
+  const token = params.get("access_token");
+  document.body.innerHTML = token 
+    ? `Access token: <code>${token}</code>` 
+    : "No token received.";
+</script>
+</body>
+</html>
